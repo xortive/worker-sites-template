@@ -2,9 +2,19 @@
   "private": true,
   "version": "1.0.0",
   "description": "A template for kick starting a Cloudflare Workers project",
-  "main": "index.js",
+  "main": "./dist/worker.js",
   "license": "MIT",
   "dependencies": {
     "@cloudflare/kv-asset-handler": "~0.0.11"
+  },
+  "scripts": {
+    "build": "npm install && webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write '**/*.{js,css,json,md}'"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0"
   }
 }

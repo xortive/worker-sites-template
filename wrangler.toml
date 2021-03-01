@@ -3,3 +3,8 @@ name = "my-site"
 type = "webpack"
 workers_dev = true
 site = { bucket = "./public" }
+
+[build]
+command = "cd workers-site && npm install && npm run build"
+watch_dir = "workers-site"
+upload_format = "service-worker"
